@@ -1,0 +1,198 @@
+/* 
+Author: Gureet Kharod
+Date: February 2, 2025
+Responsive layout styles
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Roboto', system-ui, sans-serif;
+}
+
+/* Base styles - Mobile */
+body {
+    background-color: #E6D5AC;
+    color: black;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.widget-card {
+    border: 5px solid black;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.widget-image {
+    border: none;
+    overflow: hidden;
+}
+
+.widget-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.widget-content {
+    padding: 1rem;
+}
+
+.widget-title {
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.widget-link {
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.widget-description {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Mobile Layout */
+.main-widget {
+    margin-bottom: 2rem;
+}
+
+.main-widget .widget-card {
+    display: flex;
+    align-items: start;
+}
+
+.main-widget .widget-image {
+    flex: 0 0 200px;
+    height: 150px;
+}
+
+.main-widget .widget-content {
+    flex: 1;
+}
+
+.grid-container {
+    display: block;
+}
+
+.grid-container .widget-card {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.grid-container .widget-image {
+    flex: 0 0 80px;
+    height: 80px;
+}
+
+.grid-container .widget-content {
+    flex: 1;
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 481px) {
+    body {
+        background-color: #2F3640;
+        color: white;
+    }
+
+    .widget-card {
+        border: 5px solid white;
+        background-color: #353B48;
+    }
+
+    .widget-title, .widget-description, .widget-link {
+        color: white;
+    }
+
+    .main-widget .widget-card {
+        margin-bottom: 3rem;
+    }
+
+    .main-widget .widget-image {
+        flex: 0 0 400px;
+        height: 300px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .grid-container .widget-card {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .grid-container .widget-image {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+/* Desktop Layout (1024px and above) */
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main-widget {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .main-widget .widget-card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .main-widget .widget-image {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .main-widget .widget-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .grid-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .grid-container .widget-card {
+        display: block;
+    }
+
+    .grid-container .widget-image {
+        height: 140px;
+    }
+}
