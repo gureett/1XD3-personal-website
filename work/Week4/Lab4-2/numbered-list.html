@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simple innerHTML Example</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function changeDiv() {
+            var number = prompt("Enter a positive integer:");
+            var num = parseInt(number);
+            
+            if (isNaN(num) || num <= 0) {
+                alert("Please enter a valid positive integer");
+                return;
+            }
+            
+            var content = "";
+            for (var i = 1; i <= num; i++) {
+                content += "<p>" + i + "</p>";
+            }
+            
+            document.getElementById("target").innerHTML = content;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>A Simple Example</h1>
+    <div id='target' style="color:red">Here is some text in a div.</div>
+    <p>Open the console and run changeDiv() to change the div contents.
+        Then inspect the div element in the developer tools to see the new
+        elements that were created.</p>
+</body>
+
+</html>
