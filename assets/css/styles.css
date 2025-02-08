@@ -18,6 +18,8 @@ header {
 .navbar {
     text-align: right;
     margin-right: 20px;
+    padding: 20px 0;
+    background-color: rgba(192, 216, 224, 0.9);
 }
 
 .navbar a {
