@@ -1,17 +1,19 @@
+#container {
+    max-width: 1080px;
+}
+
 .about-content {
     margin-top: 60px;
 }
 
-/* Profile section layout */
 .profile-section {
     display: flex;
     gap: 40px;
     align-items: flex-start;
 }
 
-/* Image container styling */
 .profile-image {
-    flex: 0 0 300px;
+    flex: 0 0 400px;
 }
 
 .profile-image img {
@@ -21,7 +23,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Biography content styling */
 .about-body {
     flex: 1;
 }
@@ -47,7 +48,6 @@
     margin-bottom: 8px;
 }
 
-/* About page specific responsive design */
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
